@@ -19,8 +19,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "your@email.com"
+          git config --global user.name karman07"
+          git config --global user.email "karamnsingharora01@gmail.com"
           git add .
           git commit -m "Daily update: $(date)" || echo "Nothing to commit"
           git push
