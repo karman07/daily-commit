@@ -13,14 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up Git
+        run: |
+          git config --global user.name "karman07"
+          git config --global user.email "karamnsingharora01@gmail.com"
+
       - name: Update file
         run: |
           echo "Last updated: $(date)" >> update.log
 
-      - name: Commit changes
+      - name: Commit and Push changes
         run: |
-          git config --global user.name karman07"
-          git config --global user.email "karamnsingharora01@gmail.com"
           git add .
           git commit -m "Daily update: $(date)" || echo "Nothing to commit"
           git push
