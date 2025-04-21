@@ -23,7 +23,9 @@ jobs:
           echo "Last updated: $(date)" >> update.log
 
       - name: Commit and Push changes
+        env:
+          TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git add .
           git commit -m "Daily update: $(date)" || echo "Nothing to commit"
-          git push
+          git push https://x-access-token:${TOKEN}@github.com/karman07/daily-commit.git HEAD:main
