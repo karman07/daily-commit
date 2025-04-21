@@ -20,7 +20,7 @@ jobs:
           git config --global user.name "karman07"
           git config --global user.email "karamnsingharora01@gmail.com"
 
-      - name: Debug: Print encoded token (REMOVE LATER)
+      - name: Debug:Print
         env:
           TOKEN: ${{ secrets.GH_PAT }}
         run: |
