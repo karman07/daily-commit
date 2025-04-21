@@ -1,0 +1,5 @@
+      - name: Debug: Print token (⚠️ REMOVE AFTER TESTING)
+        env:
+          TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "Token: $TOKEN"
